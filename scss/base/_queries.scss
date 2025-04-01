@@ -1,0 +1,178 @@
+
+@media screen and (max-width: 1100px) {
+    header nav div h1 {
+        font-size: nth($font-size, 1);
+    }
+    h2{  
+        font-size: 25px;
+        padding: 8px;
+    }
+    .container-fluid {
+        flex-direction: column;
+    }
+    .grid-inicio {
+        flex-direction: column;
+    }
+    header .navbar-nav {
+        font-size: 15px;
+        font-weight: 200;
+    }
+    .index .grid-inicio .grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6 .btn {
+        font-size: nth($font-size, 1);
+    }
+    .organizacion .minister-form-floating {
+        height: 180px;
+    }
+    .organizacion .minister-form-floating .minister {
+        font-size: 15px;
+        padding: 5px;
+        margin: 10px;
+    }
+    .contact .text-overlay{
+        transform: translate(-20%, -38%);
+        font-size: 15px;
+        padding: 5px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    header nav div h1 {
+        font-size: nth($font-size, 1);
+        font-weight: 700;
+    }
+    h2{  
+        font-size: nth($font-size, 1);
+        padding: 5px;
+    }
+    .portada{
+        font-size: 15px;
+    }
+    .grid-inicio {
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-inicio .grid-item1, .grid-item3, .grid-item4 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .index .grid-inicio div {
+        position: relative;
+    }
+    .index .portada p{
+        font-size: 15px;
+        font-weight: bold;
+        background-color: whitesmoke;
+    }
+    .index .grid-inicio .grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6 .btn {
+        font-size: nth($font-size, 1);
+    }
+    .organizacion .minister-form-floating {
+        height: 150px;
+    }
+    .organizacion .minister-form-floating .minister {
+        font-size: 12px;
+        padding: 5px;
+        margin: 10px;
+    }
+    .contact div .map{
+        height: auto;
+        max-width: 100%;
+    }
+    .contact div img{
+        width: auto;
+        height: auto;
+    }
+    .contact .text-overlay{
+        transform: translate(-25%, -30%);
+        font-size: 12px;
+        padding: 5px;
+        margin: 10px;
+    }
+    .news .container-notides{
+        flex-direction: column;
+    }
+    footer h4 {
+        font-size: 25px;
+        font-weight: 500;
+    }
+    footer div a {
+        font-size: 10px;
+        font-weight: 180px;
+        display: auto;
+    }
+    footer div a img {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    header nav div .logoms{
+        width: 100px;
+        height: 50px;
+    }
+    header nav div h1 {
+        font-size: 10px;
+        font-weight: 500;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    .grid-inicio {
+        grid-template-columns: 1fr;
+    }
+    .index .grid-inicio .grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6 .btn {
+        font-size: 15px;
+    }
+    .organizacion .minister-form-floating {
+        height: 200px;
+    }
+    .organizacion .minister-form-floating .minister {
+        font-size: 10px;
+        padding: 2px;
+        margin: 5px;
+    }
+    .contact .text-overlay{
+        transform: translate(-20%, -20%);
+        font-size: 10px;
+        padding: 2px;
+        margin: 5px;
+    }
+    footer h4 {
+        font-size: nth($font-size, 1);
+        font-weight: 100;
+    }
+    footer div a {
+        font-size: 10px;
+        font-weight: 50;
+    }
+    footer div a img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    header nav div h1 {
+        font-size: 10px;
+        font-weight: 300;
+    }
+    .portada{
+        font-size: 10px;
+    }
+    .organizacion .institu-container .secre ul li {
+        margin: 5px;
+        font-size: 10px;                    
+    }
+    .organizacion .minister-form-floating {
+        height: 200px;
+    }
+    .contact .text-overlay{
+        transform: translate(-25%, -25%);
+        font-size: 8px;
+        padding: 2px;
+        margin: 5px;
+    }
+}
+

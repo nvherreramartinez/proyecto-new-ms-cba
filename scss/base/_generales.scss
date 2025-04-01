@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Arima", system-ui;
+    font-weight: 300;
+    font-style: italic;
+    overflow-x: hidden;
+}
+h2 {
+    @include header-style(nth($font-size, 4), $primary-color);
+}
+
+h3 {
+    @include header-background-style($primary-color);
+}
+/*h2{
+    font-size: nth($font-size, 4);
+    color: whitesmoke;
+    background-color: $primary-color;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+}
+h3{
+    font-weight: 900;
+    color: whitesmoke;
+    background-color: $primary-color;
+    padding: 10px;
+}*/
