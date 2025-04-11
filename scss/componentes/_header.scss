@@ -3,7 +3,7 @@ header nav div{
     text-decoration: none;
     background-color: $second-color;
     color: whitesmoke;
-    font-size: 200;
+    font-size: 200px;
     margin: 0;
     .logoms{
         width: 150px;
@@ -16,7 +16,7 @@ header nav div{
         font-weight: 900;
         span{
             font-size: nth($font-size, 4);
-            color: rgba(114, 6, 91, 0.897);
+            color: rgba(6, 8, 114, 0.897);
         }
     }
     div ul{

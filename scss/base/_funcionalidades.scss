@@ -1,8 +1,8 @@
 //Variablesgit init
-$primary-color: #3bd8f4;
-$second-color: #fa3d7cf8;
+$primary-color: #5eddf4;
+$second-color: #1e65acf8;
 $third-color: #333131;
-$fourth-color: #f4f4f4;
+$fourth-color: #ecf5b6;
 
 //Listas
 $font-size: 18px, 20px, 30px, 35px;
@@ -24,8 +24,20 @@ $border-radius: 5px, 8px, 10px, 15px;
     background-color: $bg-color;
     padding: 10px;
 }
-
-
+@mixin button-style($bg-color, $font-size) {
+    background-color: $bg-color;
+    font-size: $font-size;
+    color: whitesmoke;
+    border-radius: nth($border-radius, 2);
+    padding: 10px;
+    text-decoration: none;
+    &:hover {
+        background-color: $primary-color;
+        color: $fourth-color;
+        border-radius: nth($border-radius, 3);
+        font-size: nth($font-size, 3);
+    }
+}
 .button-base {
     text-align: center;
     font-size: 20px;

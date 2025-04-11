@@ -1,32 +1,108 @@
-.index{                               
-    .portada{
+.index {
+
+    /*.portada{
         text-align: right;
         height: auto;
         max-width: 100%;
         object-fit: contain;
         background-image: url(https://i.postimg.cc/hjqJ13hd/index.jpg);
         background-repeat: no-repeat;
+        background-size: cover;*/
+    .carousel {
+        position: relative;
+        height: auto;
+        min-width: 100%;
+        //max-width: 800px;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: nth($border-radius, 4);
+        box-shadow: 0 8px 20px #0000004d;
+    }
+
+    .carousel-item {
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    }
+
+    .carousel-item img {
+        object-fit: cover;
+        height: 800px;
+    }
+    button {
+        .carousel-control-prev-icon {
+            background-color: #0000004d;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+                background-color: #3633334d;
+            }
+        }
+
+        .carousel-control-next-icon {
+            background-color: #0000004d;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+                background-color: #3633334d;
+            }
+        }
+    }
+    .carousel-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        border-radius: 10px;
+        color: black;
+        background-color: #a3e6f260;
+        font-size: 21px;
+        font-weight: bold;
+        gap: 100px;
+        padding: 20px;
+        margin: 10px;
+        border-radius: nth($border-radius, 3);
+    }
+
+    .portada {
+        padding: 100px 0; // Espaciado interno arriba y abajo
+        min-height: 90vh; // Ocupar al menos el 70% de la pantalla
+        background-image: url(https://i.postimg.cc/hjqJ13hd/index.jpg);
+        background-repeat: no-repeat;
         background-size: cover;
-        p{
+        background-position: center;
+
+        p {
             color: black;
             background-color: #a3e6f260;
             font-size: 21px;
             font-weight: bold;
-            gap: 80px;
+            gap: 100px;
             padding: 20px;
             margin: 10px;
             border-radius: nth($border-radius, 3);
         }
     }
+
     .grid-inicio {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);  
+        grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 400px;
         gap: 5px;
         position: relative;
         font-size: nth($font-size, 2);
     }
-    .grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6 {
+
+    .grid-item1,
+    .grid-item2,
+    .grid-item3,
+    .grid-item4,
+    .grid-item5,
+    .grid-item6 {
         display: flex;
         border: solid 2px black;
         padding: 5%;
@@ -34,27 +110,34 @@
         width: 100%;
         height: 100%;
     }
-    .grid-item1{
+
+    .grid-item1 {
         background-image: url(https://i.postimg.cc/yYfZCPpM/centros-final.jpg);
         grid-column: 1/3;
     }
+
     .grid-item2 {
         background-image: url(https://i.postimg.cc/SQCd4wcw/laboratorio-final.jpg);
     }
+
     .grid-item3 {
         background-image: url(https://i.postimg.cc/yNDhb5Vp/nutricion-final.jpg);
         grid-row: 2/4;
     }
+
     .grid-item4 {
         background-image: url(https://i.postimg.cc/jdhhwPgc/maternidad-final.jpg);
         grid-column: 2/4;
     }
+
     .grid-item5 {
         background-image: url(https://i.postimg.cc/rmS4627j/vacunacion-final.jpg);
     }
+
     .grid-item6 {
         background-image: url(https://i.postimg.cc/k5S68dMC/farmacia-final.jpg);
     }
+
     .btn {
         background-color: rgb(3, 186, 218);
         color: white;
@@ -67,15 +150,20 @@
         font-size: 25px;
         text-align: center;
         position: relative;
-        &:hover{
-            background-color: #eea8dc;
+
+        &:hover {
+            background-color: #f34bb8;
             border: 3px solid $third-color;
             color: #555;
         }
     }
 }
-.services{
-    .flex-servicios, .flex-tramites, .flex-programas{
+
+.services {
+
+    .flex-servicios,
+    .flex-tramites,
+    .flex-programas {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -85,59 +173,69 @@
         background-repeat: no-repeat;
         background-size: cover;
         padding: auto;
+
         div {
             display: flex;
             margin: 10px;
             width: 50%;
             max-height: 100px;
-            background: rgb(117,217,244);
-background: linear-gradient(270deg, rgba(117,217,244,1) 9%, rgba(3,218,183,1) 49%, rgba(4,69,80,1) 100%);
+            background: rgb(117, 217, 244);
+            background: linear-gradient(270deg, rgba(117, 217, 244, 1) 9%, rgba(3, 218, 183, 1) 49%, rgba(4, 69, 80, 1) 100%);
             border-radius: nth($border-radius, 2);
             padding: 10px;
             margin-right: 3px;
             text-decoration: none;
             color: whitesmoke;
             font-weight: bold;
+
             &:hover {
-                background: rgb(117,217,244);
-                background: linear-gradient(270deg, rgba(117,217,244,1) 20%, rgba(191,65,191,1) 51%, rgba(4,69,80,1) 100%);
+                background: rgb(117, 217, 244);
+                background: linear-gradient(270deg, rgba(117, 217, 244, 1) 20%, rgba(191, 65, 191, 1) 51%, rgba(4, 69, 80, 1) 100%);
                 border: 3px solid $third-color;
             }
         }
     }
+
     .flex-servicios {
         align-items: start;
         background-image: url(https://i.postimg.cc/8cQbWHgK/institucional01.jpg);
     }
+
     .flex-tramites {
         align-items: end;
         background-image: url(https://i.postimg.cc/Njzmm416/tramites-final.jpg);
     }
+
     .flex-programas {
         justify-content: space-between;
         align-items: start;
         background-image: url(https://i.postimg.cc/jqHHmybT/saluddigital01.jpg);
     }
 }
+
 .organizacion {
     text-align: center;
     background: #fff;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: nth($border-radius, 2);
-    div ul{
+
+    div ul {
         list-style: none;
     }
+
     .minister-form-floating {
         display: flex;
         align-content: center;
         width: 100%;
         height: 150px;
+
         .card-img-top {
             max-width: 80px;
             height: 100px;
             border-radius: nth($border-radius, 2);
         }
+
         .minister {
             color: black;
             background-color: #a3e6f260;
@@ -149,38 +247,42 @@ background: linear-gradient(270deg, rgba(117,217,244,1) 9%, rgba(3,218,183,1) 49
             height: auto;
         }
     }
-    .accordion-button{
+
+    .accordion-button {
         background-color: $primary-color;
         color: whitesmoke;
-    } 
+    }
 }
-.news{
-    .container-notides{
+
+.news {
+    .container-notides {
         display: flex;
         overflow: hidden;
         padding: 10px;
         max-width: auto;
         margin: 20px auto;
         border-radius: nth($border-radius, 4);
-        box-shadow: 0 8px 20px  #0000004d;
-        .novedades iframe{
+        box-shadow: 0 8px 20px #0000004d;
+
+        .novedades iframe {
             display: flex;
             padding: 10px;
             height: 400px;
             max-width: 100%;
             margin: 20px auto;
-            box-shadow: 0 8px 20px  #0000004d;
+            box-shadow: 0 8px 20px #0000004d;
             border-radius: nth($border-radius, 4);
             object-fit: cover;
         }
     }
-    .novedades dl a{
+
+    .novedades dl a {
         display: flex;
         margin: 10px;
         width: 100%;
         max-height: 100px;
-        background: rgb(117,217,244);
-        background: linear-gradient(90deg, rgba(117,217,244,1) 20%, rgba(3,186,218,1) 55%, rgba(4,69,80,1) 100%);
+        background: rgb(117, 217, 244);
+        background: linear-gradient(90deg, rgba(117, 217, 244, 1) 20%, rgba(3, 186, 218, 1) 55%, rgba(4, 69, 80, 1) 100%);
         border-radius: nth($border-radius, 1);
         text-align: center;
         padding: 10px;
@@ -190,49 +292,58 @@ background: linear-gradient(270deg, rgba(117,217,244,1) 9%, rgba(3,218,183,1) 49
         font-weight: bold;
         transition-property: width;
         transition-duration: 2s;
-        &:hover{
+
+        &:hover {
             transform: translateX(30px);
         }
     }
-    .carousel-slide .carousel-inner{
+
+    .carousel-slide .carousel-inner {
         margin: 20px auto;
         border-radius: nth($border-radius, 4);
-        box-shadow: 0 8px 20px  #0000004d;
-        .carousel-item-active{
+        box-shadow: 0 8px 20px #0000004d;
+
+        .carousel-item-active {
             transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
-            img{
+
+            img {
                 object-fit: cover;
                 height: 400px;
             }
         }
-    button{
-        .carousel-control-prev-icon{
-            background-color: $primary-color;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-                &:hover{
+
+        button {
+            .carousel-control-prev-icon {
+                background-color: $primary-color;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+
+                &:hover {
                     background-color: $primary-color;
                 }
             }
-        .carousel-control-next-icon{
-            background-color:  #0000004d;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-                &:hover{
+
+            .carousel-control-next-icon {
+                background-color: #0000004d;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+
+                &:hover {
                     background-color: #0000004d;
                 }
             }
         }
     }
-    .docdifusion a{
+
+    .docdifusion a {
         display: flex;
         margin: 10px;
         width: 100%;
         max-height: 100px;
-        background: rgb(117,217,244);
-        background: linear-gradient(90deg, rgba(117,217,244,1) 20%, rgba(3,186,218,1) 55%, rgba(4,69,80,1) 100%);
+        background: rgb(117, 217, 244);
+        background: linear-gradient(90deg, rgba(117, 217, 244, 1) 20%, rgba(3, 186, 218, 1) 55%, rgba(4, 69, 80, 1) 100%);
         border-radius: nth($border-radius, 1);
         padding: 10px;
         margin-right: 3px;
@@ -241,35 +352,39 @@ background: linear-gradient(270deg, rgba(117,217,244,1) 9%, rgba(3,218,183,1) 49
         font-weight: bold;
         transition-property: width;
         transition-duration: 3s;
-        &:hover{
+
+        &:hover {
             transform: translateX(30px);
-            background: rgb(142,54,159);
-            background: linear-gradient(90deg, rgba(142,54,159,1) 0%, rgba(250,61,124,1) 54%, rgba(238,168,220,0) 100%);
+            background: rgb(142, 54, 159);
+            background: linear-gradient(90deg, rgba(142, 54, 159, 1) 0%, rgba(250, 61, 124, 1) 54%, rgba(238, 168, 220, 0) 100%);
             display: flex;
         }
     }
 }
-.contact{
+
+.contact {
     .map {
         display: flex;
-        justify-content: center; 
-        align-items: center;    
-        height: auto;   
-        max-width: 100%;      
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        max-width: 100%;
         background-color: $fourth-color;
         padding: 5px;
         margin: 5px;
     }
+
     iframe {
         border: 3px solid $third-color;
     }
-    .centros ol li{
+
+    .centros ol li {
         display: flex;
         margin: 10px;
         width: 100%;
         max-height: 100px;
-        background: rgb(117,217,244);
-        background: linear-gradient(90deg, rgba(117,217,244,1) 20%, rgba(3,186,218,1) 55%, rgba(4,69,80,1) 100%);
+        background: rgb(117, 217, 244);
+        background: linear-gradient(90deg, rgba(117, 217, 244, 1) 20%, rgba(3, 186, 218, 1) 55%, rgba(4, 69, 80, 1) 100%);
         border-radius: nth($border-radius, 1);
         padding: 10px;
         margin-right: 3px;
@@ -278,44 +393,51 @@ background: linear-gradient(270deg, rgba(117,217,244,1) 9%, rgba(3,218,183,1) 49
         font-weight: bold;
         transition-property: width;
         transition-duration: 3s;
-        &:hover{
+
+        &:hover {
             transform: translateX(30px);
-            background: rgb(142,54,159);
-            background: linear-gradient(90deg, rgba(142,54,159,1) 0%, rgba(250,61,124,1) 54%, rgba(238,168,220,0) 100%);
+            background: rgb(142, 54, 159);
+            background: linear-gradient(90deg, rgba(142, 54, 159, 1) 0%, rgba(250, 61, 124, 1) 54%, rgba(238, 168, 220, 0) 100%);
             display: flex;
         }
-        .map2{
+
+        .map2 {
             display: flex;
-            justify-content: center; 
-            align-items: center;    
-            height: 400px;   
-            max-width: 100%;      
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            max-width: 100%;
             background-color: $fourth-color;
             padding: 5px;
             margin: 5px;
         }
     }
+
     .marco-formulario {
-        .formulario{
+        .formulario {
             width: 80%;
             margin: 20px auto;
             background-color: whitesmoke;
             padding: 20px;
             border-radius: nth($border-radius, 3);
-            box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.302);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.302);
             font-family: "Arima", system-ui;
-            form{
+
+            form {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
-                div{
+
+                div {
                     display: flex;
                     flex-direction: column;
+
                     label {
                         margin-bottom: 5px;
                         font-weight: bold;
                         color: #555;
-                        }
+                    }
+
                     textarea {
                         padding: 10px;
                         border: 1px solid #ccc;
@@ -326,16 +448,20 @@ background: linear-gradient(270deg, rgba(117,217,244,1) 9%, rgba(3,218,183,1) 49
                         resize: vertical;
                         min-height: 100px;
                     }
+
                     .submit {
                         @extend .button-base;
                         background-color: $second-color;
+
                         &:hover {
                             background-color: #eea8dc;
                         }
                     }
+
                     .reset {
                         @extend .button-base;
                         background-color: $primary-color;
+
                         &:hover {
                             background-color: #75d9f4;
                         }
@@ -344,7 +470,8 @@ background: linear-gradient(270deg, rgba(117,217,244,1) 9%, rgba(3,218,183,1) 49
             }
         }
     }
-    .contactos img{
+
+    .contactos img {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 400px;
@@ -355,15 +482,18 @@ background: linear-gradient(270deg, rgba(117,217,244,1) 9%, rgba(3,218,183,1) 49
         height: auto;
         max-width: 100%;
     }
+
     .image-container {
         position: relative;
         width: 90%;
         margin: 20px auto;
     }
+
     .image-container .teleconsulta {
         width: 100%;
         display: block;
     }
+
     .text-overlay {
         position: absolute;
         top: 22%;
@@ -377,15 +507,18 @@ background: linear-gradient(270deg, rgba(117,217,244,1) 9%, rgba(3,218,183,1) 49
         padding: 10px;
         border-radius: nth($border-radius, 1);
     }
+
     .grid-contac {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);  
+        grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 400px;
         gap: 15px;
         position: relative;
         font-size: nth($font-size, 2);
     }
-    .grid-contac1, .grid-contac2 {
+
+    .grid-contac1,
+    .grid-contac2 {
         display: flex;
         border: solid 2px black;
         padding: 5%;
