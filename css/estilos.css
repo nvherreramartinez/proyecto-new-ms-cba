@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,12 +20,13 @@ body {
   font-family: "Arima", system-ui;
   font-weight: 500;
   overflow-x: hidden;
+  background-color: #ccc;
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 40px;
   color: whitesmoke;
-  background-color: #5eddf4;
+  background-color: #42d9f4;
   width: auto;
   height: auto;
   margin: 0;
@@ -34,7 +36,7 @@ h2 {
 h3 {
   font-weight: 900;
   color: whitesmoke;
-  background-color: #5eddf4;
+  background-color: #42d9f4;
   padding: 10px;
 }
 
@@ -43,22 +45,45 @@ header nav div {
   text-decoration: none;
   background-color: rgba(30, 101, 172, 0.9725490196);
   color: whitesmoke;
-  font-size: 200px;
-  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+header nav div span {
+  font-size: 50px;
+  color: rgba(6, 8, 114, 0.897);
 }
 header nav div .logoms {
   width: 150px;
   height: 70px;
 }
-header nav div h1 {
-  font-size: 35px;
-  padding: 10px;
-  color: whitesmoke;
+header nav div .navbar-nav {
+  display: inline-flexbox;
+  list-style: none;
+  margin-left: auto;
+}
+header nav div .navbar-nav li a {
+  text-decoration: none;
+  font-size: 20px;
   font-weight: 900;
 }
-header nav div h1 span {
-  font-size: 35px;
-  color: rgba(6, 8, 114, 0.897);
+header nav div .navbar-nav li a:hover {
+  font-size: 30px;
+  border-radius: 8px;
+  background-color: #2c87f7;
+}
+header nav div .navbar-nav li ul {
+  margin-left: auto;
+  background-color: rgba(30, 101, 172, 0.9725490196);
+}
+header nav div .navbar-nav li ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+}
+header nav div .navbar-nav li ul li a:hover {
+  font-size: 25px;
+  border-radius: 8px;
+  background-color: #2c87f7;
 }
 header nav div div ul {
   font-size: 18px;
@@ -66,93 +91,51 @@ header nav div div ul {
   justify-content: end;
   font-weight: bold;
 }
+header nav div .button-base, header nav .contact .marco-formulario .formulario form div .reset, .contact .marco-formulario .formulario form header nav div .reset, header nav .contact .marco-formulario .formulario form div .submit, .contact .marco-formulario .formulario form header nav div .submit {
+  text-align: center;
+  font-size: 10px;
+  border-radius: 8px;
+}
+header nav div .button-base:hover, header nav .contact .marco-formulario .formulario form div .reset:hover, .contact .marco-formulario .formulario form header nav div .reset:hover, header nav .contact .marco-formulario .formulario form div .submit:hover, .contact .marco-formulario .formulario form header nav div .submit:hover {
+  border: 3px solid #333131;
+}
 
-.index {
-  /*.portada{
-      text-align: right;
-      height: auto;
-      max-width: 100%;
-      object-fit: contain;
-      background-image: url(https://i.postimg.cc/hjqJ13hd/index.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;*/
-}
-.index .carousel {
+.index .portada {
   position: relative;
-  height: auto;
-  min-width: 100%;
-  margin: 20px auto;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3019607843);
+  /*p {
+      color: black;
+      background-color: #a3e6f260;
+      font-size: 21px;
+      font-weight: bold;
+      gap: 100px;
+      padding: 20px;
+      margin: 10px;
+      border-radius: nth($border-radius, 3);
+  }*/
 }
-.index .carousel-item {
-  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
-}
-.index .carousel-item img {
-  object-fit: cover;
-  height: 800px;
-}
-.index button .carousel-control-prev-icon {
-  background-color: rgba(0, 0, 0, 0.3019607843);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
-.index button .carousel-control-prev-icon:hover {
-  background-color: rgba(54, 51, 51, 0.3019607843);
-}
-.index button .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.3019607843);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
-.index button .carousel-control-next-icon:hover {
-  background-color: rgba(54, 51, 51, 0.3019607843);
-}
-.index .carousel-text {
+.index .portada video {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
+  height: 100%;
+  width: auto;
+  height: auto;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  border-radius: 10px;
-  color: black;
-  background-color: rgba(163, 230, 242, 0.3764705882);
-  font-size: 21px;
-  font-weight: bold;
-  gap: 100px;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-}
-.index .portada {
-  padding: 100px 0;
-  min-height: 90vh;
-  background-image: url(https://i.postimg.cc/hjqJ13hd/index.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.index .portada p {
-  color: black;
-  background-color: rgba(163, 230, 242, 0.3764705882);
-  font-size: 21px;
-  font-weight: bold;
-  gap: 100px;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
+  object-fit: contain;
+  z-index: -1;
 }
 .index .grid-inicio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 400px;
+  grid-auto-rows: 500px;
   gap: 5px;
   position: relative;
   font-size: 20px;
+  background-color: #ccc;
 }
 .index .grid-item1,
 .index .grid-item2,
@@ -189,24 +172,37 @@ header nav div div ul {
   background-image: url(https://i.postimg.cc/k5S68dMC/farmacia-final.jpg);
 }
 .index .btn {
-  background-color: rgb(3, 186, 218);
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
+  background-color: #24dadd;
   border: 3px solid black;
   width: 100%;
   height: 25%;
   padding: 2%;
-  font-size: 25px;
   text-align: center;
   position: relative;
+  transition: background-color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+}
+.index .btn a {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: color 0.3s ease;
+}
+.index .btn a:hover {
+  color: whitesmoke;
 }
 .index .btn:hover {
-  background-color: #f34bb8;
+  background-color: rgba(30, 101, 172, 0.9725490196);
   border: 3px solid #333131;
-  color: #555;
+  transform: scale(1.05);
 }
 
+.services {
+  background-color: #ccc;
+}
 .services .flex-servicios,
 .services .flex-tramites,
 .services .flex-programas {
@@ -259,13 +255,64 @@ header nav div div ul {
 
 .organizacion {
   text-align: center;
-  background: #fff;
-  padding: 20px;
+  background-color: #ccc;
+  padding: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 }
 .organizacion div ul {
   list-style: none;
+}
+.organizacion .carousel {
+  position: relative;
+  height: auto;
+  min-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3019607843);
+}
+.organizacion .carousel-item {
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+.organizacion .carousel-item img {
+  object-fit: cover;
+  height: 600px;
+}
+.organizacion button .carousel-control-prev-icon {
+  background-color: rgba(0, 0, 0, 0.3019607843);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.organizacion button .carousel-control-prev-icon:hover {
+  background-color: rgba(54, 51, 51, 0.3019607843);
+}
+.organizacion button .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.3019607843);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.organizacion button .carousel-control-next-icon:hover {
+  background-color: rgba(54, 51, 51, 0.3019607843);
+}
+.organizacion .carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 10px;
+  color: black;
+  background-color: rgba(163, 230, 242, 0.3764705882);
+  font-size: 21px;
+  font-weight: bold;
+  gap: 100px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
 }
 .organizacion .minister-form-floating {
   display: flex;
@@ -280,7 +327,7 @@ header nav div div ul {
 }
 .organizacion .minister-form-floating .minister {
   color: black;
-  background-color: rgba(163, 230, 242, 0.3764705882);
+  background-color: rgba(10, 160, 187, 0.9490196078);
   font-size: 15px;
   font-weight: bold;
   padding: 5px;
@@ -289,32 +336,40 @@ header nav div div ul {
   height: auto;
 }
 .organizacion .accordion-button {
-  background-color: #5eddf4;
+  background-color: #42d9f4;
   color: whitesmoke;
 }
 
 .news .container-notides {
+  background-color: #ccc;
   display: flex;
-  overflow: hidden;
-  padding: 10px;
-  max-width: auto;
-  margin: 20px auto;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3019607843);
 }
-.news .container-notides .novedades iframe {
+.news .container-notides .novedades {
   display: flex;
+  justify-content: center;
+}
+.news .container-notides .novedades iframe {
   padding: 10px;
   height: 400px;
-  max-width: 100%;
-  margin: 20px auto;
+  width: 500px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3019607843);
   border-radius: 15px;
   object-fit: cover;
 }
+.news .novedades {
+  background-color: #ccc;
+}
 .news .novedades dl a {
   display: flex;
-  margin: 10px;
+  margin: 5px;
   width: 100%;
   max-height: 100px;
   background: rgb(117, 217, 244);
@@ -326,6 +381,7 @@ header nav div div ul {
   text-decoration: none;
   color: whitesmoke;
   font-weight: bold;
+  font-size: 20px;
   transition-property: width;
   transition-duration: 2s;
 }
@@ -345,13 +401,13 @@ header nav div div ul {
   height: 400px;
 }
 .news .carousel-slide .carousel-inner button .carousel-control-prev-icon {
-  background-color: #5eddf4;
+  background-color: #42d9f4;
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
 .news .carousel-slide .carousel-inner button .carousel-control-prev-icon:hover {
-  background-color: #5eddf4;
+  background-color: #42d9f4;
 }
 .news .carousel-slide .carousel-inner button .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.3019607843);
@@ -361,6 +417,9 @@ header nav div div ul {
 }
 .news .carousel-slide .carousel-inner button .carousel-control-next-icon:hover {
   background-color: rgba(0, 0, 0, 0.3019607843);
+}
+.news .docdifusion {
+  background-color: #ccc;
 }
 .news .docdifusion a {
   display: flex;
@@ -375,6 +434,7 @@ header nav div div ul {
   text-decoration: none;
   color: whitesmoke;
   font-weight: bold;
+  font-size: 20px;
   transition-property: width;
   transition-duration: 3s;
 }
@@ -385,18 +445,24 @@ header nav div div ul {
   display: flex;
 }
 
+.contact {
+  background-color: #ccc;
+}
 .contact .map {
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   max-width: 100%;
-  background-color: #ecf5b6;
+  background-color: #2c87f7;
   padding: 5px;
   margin: 5px;
 }
 .contact iframe {
   border: 3px solid #333131;
+}
+.contact .centros {
+  background-color: #ccc;
 }
 .contact .centros ol li {
   display: flex;
@@ -409,6 +475,7 @@ header nav div div ul {
   padding: 10px;
   margin-right: 3px;
   text-decoration: none;
+  font-size: 20px;
   color: whitesmoke;
   font-weight: bold;
   transition-property: width;
@@ -426,7 +493,7 @@ header nav div div ul {
   align-items: center;
   height: 400px;
   max-width: 100%;
-  background-color: #ecf5b6;
+  background-color: #2c87f7;
   padding: 5px;
   margin: 5px;
 }
@@ -470,7 +537,7 @@ header nav div div ul {
   background-color: #eea8dc;
 }
 .contact .marco-formulario .formulario form div .reset {
-  background-color: #5eddf4;
+  background-color: #42d9f4;
 }
 .contact .marco-formulario .formulario form div .reset:hover {
   background-color: #75d9f4;

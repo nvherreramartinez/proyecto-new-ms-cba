@@ -1,82 +1,24 @@
 .index {
-
-    /*.portada{
-        text-align: right;
-        height: auto;
-        max-width: 100%;
-        object-fit: contain;
-        background-image: url(https://i.postimg.cc/hjqJ13hd/index.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;*/
-    .carousel {
-        position: relative;
-        height: auto;
-        min-width: 100%;
-        //max-width: 800px;
-        margin: 20px auto;
-        overflow: hidden;
-        border-radius: nth($border-radius, 4);
-        box-shadow: 0 8px 20px #0000004d;
-    }
-
-    .carousel-item {
-        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
-    }
-
-    .carousel-item img {
-        object-fit: cover;
-        height: 800px;
-    }
-    button {
-        .carousel-control-prev-icon {
-            background-color: #0000004d;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-
-            &:hover {
-                background-color: #3633334d;
-            }
-        }
-
-        .carousel-control-next-icon {
-            background-color: #0000004d;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-
-            &:hover {
-                background-color: #3633334d;
-            }
-        }
-    }
-    .carousel-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(0, 0, 0, 0.5);
-        text-align: center;
-        border-radius: 10px;
-        color: black;
-        background-color: #a3e6f260;
-        font-size: 21px;
-        font-weight: bold;
-        gap: 100px;
-        padding: 20px;
-        margin: 10px;
-        border-radius: nth($border-radius, 3);
-    }
-
     .portada {
-        padding: 100px 0; // Espaciado interno arriba y abajo
-        min-height: 90vh; // Ocupar al menos el 70% de la pantalla
-        background-image: url(https://i.postimg.cc/hjqJ13hd/index.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
 
-        p {
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+            z-index: -1;
+        }
+
+        /*p {
             color: black;
             background-color: #a3e6f260;
             font-size: 21px;
@@ -85,16 +27,17 @@
             padding: 20px;
             margin: 10px;
             border-radius: nth($border-radius, 3);
-        }
+        }*/
     }
 
     .grid-inicio {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 400px;
+        grid-auto-rows: 500px;
         gap: 5px;
         position: relative;
         font-size: nth($font-size, 2);
+        background-color: #ccc;
     }
 
     .grid-item1,
@@ -139,27 +82,40 @@
     }
 
     .btn {
-        background-color: rgb(3, 186, 218);
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
+        background-color: #24dadd;
         border: 3px solid black;
         width: 100%;
         height: 25%;
         padding: 2%;
-        font-size: 25px;
         text-align: center;
         position: relative;
+        transition: background-color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+
+        a {
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: whitesmoke;
+            }
+        }
 
         &:hover {
-            background-color: #f34bb8;
+            background-color: #1e65acf8;
             border: 3px solid $third-color;
-            color: #555;
+            transform: scale(1.05);
         }
     }
 }
 
 .services {
+    background-color: #ccc;
 
     .flex-servicios,
     .flex-tramites,
@@ -215,13 +171,74 @@
 
 .organizacion {
     text-align: center;
-    background: #fff;
-    padding: 20px;
+    background-color: #ccc;
+    padding: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: nth($border-radius, 2);
 
     div ul {
         list-style: none;
+    }
+
+    .carousel {
+        position: relative;
+        height: auto;
+        min-width: 100%;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: nth($border-radius, 4);
+        box-shadow: 0 8px 20px #0000004d;
+    }
+
+    .carousel-item {
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    }
+
+    .carousel-item img {
+        object-fit: cover;
+        height: 600px;
+    }
+
+    button {
+        .carousel-control-prev-icon {
+            background-color: #0000004d;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+                background-color: #3633334d;
+            }
+        }
+
+        .carousel-control-next-icon {
+            background-color: #0000004d;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+                background-color: #3633334d;
+            }
+        }
+    }
+
+    .carousel-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        border-radius: 10px;
+        color: black;
+        background-color: #a3e6f260;
+        font-size: 21px;
+        font-weight: bold;
+        gap: 100px;
+        padding: 20px;
+        margin: 10px;
+        border-radius: nth($border-radius, 3);
     }
 
     .minister-form-floating {
@@ -238,7 +255,7 @@
 
         .minister {
             color: black;
-            background-color: #a3e6f260;
+            background-color: #0aa0bbf2;
             font-size: 15px;
             font-weight: bold;
             padding: 5px;
@@ -256,29 +273,39 @@
 
 .news {
     .container-notides {
+        background-color: #ccc;
         display: flex;
-        overflow: hidden;
-        padding: 10px;
-        max-width: auto;
-        margin: 20px auto;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;
         border-radius: nth($border-radius, 4);
         box-shadow: 0 8px 20px #0000004d;
 
-        .novedades iframe {
+        .novedades {
             display: flex;
-            padding: 10px;
-            height: 400px;
-            max-width: 100%;
-            margin: 20px auto;
-            box-shadow: 0 8px 20px #0000004d;
-            border-radius: nth($border-radius, 4);
-            object-fit: cover;
+            justify-content: center;
+
+            iframe {
+                padding: 10px;
+                height: 400px;
+                width: 500px;
+                box-shadow: 0 8px 20px #0000004d;
+                border-radius: nth($border-radius, 4);
+                object-fit: cover;
+            }
         }
+    }
+
+    .novedades {
+        background-color: #ccc;
     }
 
     .novedades dl a {
         display: flex;
-        margin: 10px;
+        margin: 5px;
         width: 100%;
         max-height: 100px;
         background: rgb(117, 217, 244);
@@ -290,6 +317,7 @@
         text-decoration: none;
         color: whitesmoke;
         font-weight: bold;
+        font-size: 20px;
         transition-property: width;
         transition-duration: 2s;
 
@@ -337,6 +365,10 @@
         }
     }
 
+    .docdifusion {
+        background-color: #ccc;
+    }
+
     .docdifusion a {
         display: flex;
         margin: 10px;
@@ -350,6 +382,7 @@
         text-decoration: none;
         color: whitesmoke;
         font-weight: bold;
+        font-size: 20px;
         transition-property: width;
         transition-duration: 3s;
 
@@ -363,6 +396,8 @@
 }
 
 .contact {
+    background-color: #ccc;
+
     .map {
         display: flex;
         justify-content: center;
@@ -378,6 +413,10 @@
         border: 3px solid $third-color;
     }
 
+    .centros {
+        background-color: #ccc;
+    }
+
     .centros ol li {
         display: flex;
         margin: 10px;
@@ -389,6 +428,7 @@
         padding: 10px;
         margin-right: 3px;
         text-decoration: none;
+        font-size: 20px;
         color: whitesmoke;
         font-weight: bold;
         transition-property: width;

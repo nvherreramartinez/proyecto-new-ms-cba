@@ -3,20 +3,47 @@ header nav div{
     text-decoration: none;
     background-color: $second-color;
     color: whitesmoke;
-    font-size: 200px;
-    margin: 0;
+    padding: 10px;
+    font-size: nth($font-size, 1);
+    span{
+            font-size: 50px;
+            color: rgba(6, 8, 114, 0.897);
+        }
     .logoms{
         width: 150px;
         height: 70px;
     }
-    h1{
-        font-size: nth($font-size, 4);
-        padding: 10px;
-        color: whitesmoke;
-        font-weight: 900;
-        span{
-            font-size: nth($font-size, 4);
-            color: rgba(6, 8, 114, 0.897);
+    .navbar-nav{
+        display: inline-flexbox;
+        list-style: none;
+        margin-left: auto;
+        li{
+            a{
+                text-decoration: none;
+                font-size: nth($font-size, 2);
+                font-weight: 900;
+                &:hover{
+                    font-size: nth($font-size, 3);
+                    border-radius: nth($border-radius, 2);
+                    background-color: $fourth-color;
+                }
+            }
+            ul{
+                margin-left: auto;
+                background-color: $second-color;
+                li{
+                    a{
+                        text-decoration: none;
+                        font-size: 20px;
+                        font-weight: 900;
+                        &:hover{
+                            font-size: 25px;
+                            border-radius: nth($border-radius, 2);
+                            background-color: $fourth-color;
+                        }
+                    }
+                }
+            }
         }
     }
     div ul{
@@ -24,5 +51,13 @@ header nav div{
         font-weight: 200;
         justify-content: end;
         font-weight: bold;
-    }            
+    }   
+    .button-base{
+        text-align: center;
+        font-size: 10px;
+        border-radius: nth($border-radius, 2);
+        &:hover{
+            border: 3px solid $third-color;
+        }
+    }      
 }
